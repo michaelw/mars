@@ -71,6 +71,10 @@ func New(ctx context.Context, config Config) (M *MARS) {
 	return
 }
 
+func (M *MARS) Context() context.Context {
+	return M.ctx
+}
+
 func (M *MARS) Worker(ctx context.Context) error {
 	for {
 		select {
